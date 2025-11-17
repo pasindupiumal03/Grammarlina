@@ -162,11 +162,11 @@ export default function OrganizationDetailPage() {
     organizations[0] ||
     ({
       _id: String(params.id),
-      name: "CodeScale Team",
-      organizationAdmin: "admin@codescale.lk",
+      name: "Grammarlina Team",
+      organizationAdmin: "admin@grammarlina.com",
       members: [],
       cookies: [],
-      logo: "/placeholder-logo.png",
+      logo: "/logo.svg",
     } as any);
 
   useMemo(() => {

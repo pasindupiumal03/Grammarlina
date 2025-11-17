@@ -45,7 +45,7 @@ Thank you!`
     )
 
     // Create mailto link
-    const mailtoLink = `mailto:hello@sessionshare.app?subject=${subject}&body=${body}`
+    const mailtoLink = `mailto:contact@grammarlina.com?subject=${subject}&body=${body}`
 
     // Open email client
     window.location.href = mailtoLink
@@ -174,8 +174,8 @@ Thank you!`
 
             <div className="mt-8 pt-8 border-t border-border text-center">
               <p className="text-sm text-foreground/70 mb-2">Or email us directly:</p>
-              <a href="mailto:hello@sessionshare.app" className="text-primary font-semibold hover:underline">
-                hello@sessionshare.app
+              <a href="mailto:contact@grammarlina.com" className="text-primary font-semibold hover:underline">
+                contact@grammarlina.com
               </a>
             </div>
           </Card>

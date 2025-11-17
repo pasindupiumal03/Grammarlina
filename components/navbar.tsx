@@ -16,7 +16,7 @@ export function Navbar() {
     { href: "#features", label: "Features" },
     { href: "#how-it-works", label: "How it Works" },
     { href: "#pricing", label: "Pricing" },
-    { href: "#book-demo", label: "Book a Demo" },
+    { href: "#download-extension", label: "Download Extension" },
   ]
 
   const scrollToSection = (href: string) => {
@@ -56,7 +56,7 @@ export function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/home" className="flex items-center gap-2">
-            <Image src="/logo.png" alt="Grammarlina" width={32} height={32} />
+            <Image src="/logo.svg" alt="Grammarlina" width={32} height={32} />
             <span className="font-bold text-foreground hidden sm:inline">Grammarlina</span>
           </Link>
 
@@ -78,7 +78,7 @@ export function Navbar() {
             <Button variant="ghost" size="sm" onClick={() => router.push("/login")}>
               Sign in
             </Button>
-            <Button size="sm" onClick={handleBookDemoClick}>Book a Demo</Button>
+            <Button size="sm" onClick={handleBookDemoClick}>Download Extension</Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -106,7 +106,7 @@ export function Navbar() {
                 Sign in
               </Button>
               <Button size="sm" className="flex-1 py-3" onClick={handleBookDemoClick}>
-                Book a Demo
+                Download Extension
               </Button>
             </div>
           </div>
