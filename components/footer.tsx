@@ -14,7 +14,7 @@ export function Footer() {
               <Image src="/logo.svg" alt="Grammarlina" width={32} height={32} />
               <span className="font-mono font-bold text-foreground">Grammarlina</span>
             </div>
-            <p className="text-sm text-foreground/60">Secure app session sharing for teams.</p>
+            <p className="text-sm text-foreground/60">Smart writing assistance & originality checking — right in your browser.</p>
           </div>
 
           {/* Links */}

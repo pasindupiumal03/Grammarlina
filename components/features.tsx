@@ -7,43 +7,43 @@ import { Card } from "@/components/ui/card"
 const features = [
   {
     icon: Zap,
-    title: "One-click session sharing",
-    description: "Share access to supported apps effortlessly.",
+    title: "AI Writing Enhancer",
+    description: "Get advanced suggestions for clarity, tone, and correctness across emails, documents, and web editors.",
   },
   {
     icon: Shield,
-    title: "Moderator controls",
-    description: "Approve, revoke, or pause in real-time.",
+    title: "Custom Plagiarism Checker",
+    description: "Instantly scan your content for originality using our built-in browser tool.",
   },
   {
     icon: Lock,
-    title: "Editor roles",
-    description: "Granular edit vs. view permissions per app.",
+    title: "Real-time Editing Tools",
+    description: "Receive smart recommendations as you type—rewrite, refine, and optimize with one click.",
   },
   {
     icon: Users,
-    title: "Multi-org support",
-    description: "Isolate teams and permissions (paid).",
+    title: "Multi-Device Support",
+    description: "Works seamlessly on Chrome and Edge (Firefox coming soon).",
   },
   {
     icon: Clock,
-    title: "Easy update",
-    description: "Update access to the apps instantly.",
+    title: "Secure & Private",
+    description: "Your writing stays on your device—no account-sharing or risky workarounds.",
   },
   {
     icon: Chrome,
-    title: "Browser extension",
-    description: "Works in Chrome/Edge; Firefox soon.",
+    title: "Effortless Updates",
+    description: "New features and improvements roll out automatically.",
   },
   {
     icon: Fingerprint,
-    title: "SSO friendly",
+    title: "SSO Friendly",
     description: "Plays nicely with your existing login flows.",
   },
   {
     icon: UserPlus,
-    title: "Unlimited Users",
-    description: "Add as many team members as you need without restrictions.",
+    title: "Unlimited Usage",
+    description: "Analyze and enhance as much as you want without restrictions.",
   },
 ]
 
@@ -80,7 +80,7 @@ export function Features() {
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-sans text-foreground mb-4">Powerful Features</h2>
           <p className="text-base sm:text-lg text-foreground/70 max-w-2xl mx-auto px-4">
-            Everything you need to securely share app sessions with your team.
+            Everything you need to improve your writing and run plagiarism checks effortlessly.
           </p>
         </motion.div>
 
