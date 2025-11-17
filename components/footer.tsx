@@ -11,7 +11,7 @@ export function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <Image src="/logo.png" alt="Grammarlina" width={32} height={32} />
+              <Image src="/logo.svg" alt="Grammarlina" width={32} height={32} />
               <span className="font-mono font-bold text-foreground">Grammarlina</span>
             </div>
             <p className="text-sm text-foreground/60">Secure app session sharing for teams.</p>

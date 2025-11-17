@@ -349,7 +349,7 @@ export default function RegisterPage() {
               transition={{ delay: 0.2, duration: 0.5, type: "spring" }}
               className="relative inline-flex items-center justify-center w-20 h-20 rounded-2xl mb-4 shadow-lg"
             >
-              <img src="logo.png" alt="" />
+              <img src="/logo.svg" alt="Grammarlina" />
               <motion.div
                 animate={{ rotate: -360 }}
                 transition={{

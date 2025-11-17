@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     description: "Share and collaborate on sessions with your team",
     images: [
       {
-        url: "/placeholder.jpg",
+        url: "/logo.svg",
         width: 1200,
         height: 630,
         alt: "Grammarlina",
@@ -83,7 +83,7 @@ export const metadata: Metadata = {
     creator: "@SessionShare",
     title: "Grammarlina - Collaborative Platform",
     description: "Share and collaborate on sessions with your team",
-    images: ["/placeholder.jpg"],
+    images: ["/logo.svg"],
   },
   robots: {
     index: true,
@@ -98,14 +98,14 @@ export const metadata: Metadata = {
   },
   generator: "v0.app",
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+    icon: "/logo.svg",
+    shortcut: "/logo.svg",
+    apple: "/logo.svg",
   },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#09090b",
+  themeColor: "#1BC19A",
 };
 
 export default function RootLayout({

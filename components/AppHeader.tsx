@@ -164,8 +164,8 @@ export default function AppHeader({
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-lg flex items-center justify-center">
               <Image
-                src="/logo.png"
-                alt="CodeScale Logo"
+                src="/logo.svg"
+                alt="Grammarlina Logo"
                 width={24}
                 height={24}
                 className="w-full h-full"

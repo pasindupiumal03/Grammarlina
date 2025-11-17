@@ -16,6 +16,16 @@ export function Hero() {
       router.push("/#book-demo");
     }
   };
+  
+  const scrollToPricing = () => {
+    const el = document.getElementById("pricing");
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+      router.push("/#pricing");
+    }
+  };
+
   return (
     <section className="relative overflow-hidden pt-16 pb-24 sm:pt-20 sm:pb-32 px-4 sm:px-6 lg:px-8 bg-background">
       {/* Enhanced animated background blobs - hidden on mobile for performance */}
@@ -25,7 +35,7 @@ export function Hero() {
         style={{ animationDelay: "2s" }}
       />
       <div
-        className="absolute top-1/2 left-10 w-32 h-32 sm:w-64 sm:h-64 bg-gradient-to-r from-blue-500/10 via-purple-500/5 to-accent/10 rounded-full blur-3xl blob hidden sm:block"
+        className="absolute top-1/2 left-10 w-32 h-32 sm:w-64 sm:h-64 bg-gradient-to-r from-primary/10 via-accent/5 to-primary/10 rounded-full blur-3xl blob hidden sm:block"
         style={{ animationDelay: "4s" }}
       />
 
@@ -90,7 +100,7 @@ export function Hero() {
         >
           <Badge
             variant="secondary"
-            className="bg-gradient-to-r from-white via-blue-50 to-blue-100 text-primary border-blue-200 shadow-lg backdrop-blur-sm"
+            className="bg-gradient-to-r from-white via-primary/10 to-primary/20 text-primary border-primary/30 shadow-lg backdrop-blur-sm"
           >
             <motion.span
               className="w-2 h-2 bg-primary rounded-full mr-2 relative"
@@ -108,7 +118,7 @@ export function Hero() {
               className="bg-clip-text text-transparent font-medium"
               style={{
                 background:
-                  "linear-gradient(to right, #1e40af, #3b82f6, #60a5fa)",
+                  "linear-gradient(to right, #1BC19A, #1BC19A, #1BC19A)",
                 WebkitBackgroundClip: "text",
                 backgroundClip: "text",
               }}
@@ -132,7 +142,7 @@ export function Hero() {
             className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-sans text-balance leading-tight mb-4 sm:mb-6"
           >
             <span className="bg-gradient-to-r from-foreground via-foreground to-foreground/80 bg-clip-text text-transparent">
-              Share App Sessions.
+              Get Grammarly Premium.
             </span>
             <br />
             <motion.span
@@ -141,7 +151,7 @@ export function Hero() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.5 }}
             >
-              Securely. Effortlessly.
+              Write Clearly. Confidently. Forever.
             </motion.span>
           </motion.h1>
           <motion.p
@@ -151,8 +161,7 @@ export function Hero() {
             className="text-base sm:text-lg md:text-xl text-foreground/70 text-balance max-w-2xl mx-auto mb-6 sm:mb-8 leading-relaxed px-2"
           >
             <span className="bg-gradient-to-r from-foreground/80 via-foreground/70 to-foreground/60 bg-clip-text text-transparent">
-              Grammarlina lets organizations grant temporary, moderated access
-              to web apps without sharing passwords.
+              Enjoy lifetime access to advanced writing tools and your own custom plagiarism checker—all for a single one-time payment.
             </span>
           </motion.p>
         </div>
@@ -177,9 +186,9 @@ export function Hero() {
             <Button
               size="lg"
               className="gap-2 bg-gradient-to-r from-primary via-primary to-primary/90 hover:from-primary/90 hover:via-primary hover:to-primary shadow-xl shadow-primary/25 border-0 text-white font-semibold px-6 sm:px-8 py-4 sm:py-6 h-auto w-full sm:w-auto"
-              onClick={scrollToBookDemo}
+              onClick={scrollToPricing}
             >
-              Book a demo
+              Start Now
               <motion.div
                 animate={{ x: [0, 4, 0] }}
                 transition={{
@@ -204,45 +213,9 @@ export function Hero() {
               onClick={() => router.push("/login")}
               className="border-2 border-primary/20 hover:border-primary/40 hover:bg-primary/5 backdrop-blur-sm font-semibold px-6 sm:px-8 py-4 sm:py-6 h-auto shadow-lg w-full sm:w-auto"
             >
-              Try free
+              Try Now
             </Button>
           </motion.div>
-        </motion.div>
-
-        {/* Enhanced Visual Mockup */}
-        <motion.div
-          initial={{ opacity: 0, y: 50, scale: 0.95 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{
-            duration: 0.8,
-            delay: 0.6,
-            type: "spring",
-            bounce: 0.2,
-          }}
-          className="relative group"
-        >
-          {/* Glow effect behind the video container */}
-          <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-
-          <div className="relative bg-gradient-to-br from-primary/8 via-primary/4 to-transparent rounded-2xl sm:rounded-3xl border border-border/50 p-4 sm:p-8 md:p-12 backdrop-blur-sm shadow-2xl mx-2 sm:mx-0">
-            {/* Subtle inner glow */}
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-accent/5 rounded-3xl" />
-
-            <div className="relative aspect-video bg-gradient-to-br from-foreground/8 via-foreground/4 to-transparent rounded-xl sm:rounded-2xl overflow-hidden border border-border/30 shadow-xl">
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/UoP-b321y78?autoplay=1&mute=1&loop=1"
-                title="Grammarlina Demo"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              />
-            </div>
-
-            {/* Decorative elements */}
-            <div className="absolute -top-2 -right-2 w-6 h-6 bg-primary/20 rounded-full blur-sm" />
-            <div className="absolute -bottom-2 -left-2 w-8 h-8 bg-accent/20 rounded-full blur-sm" />
-          </div>
         </motion.div>
       </div>
     </section>
