@@ -101,7 +101,7 @@ function RouteLoading() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.6 }}
         >
-          <h1 className="text-2xl font-bold text-foreground mb-1">Session Share</h1>
+          <h1 className="text-2xl font-bold text-foreground mb-1">Grammarlina</h1>
           <motion.p 
             className="text-sm text-muted-foreground"
             animate={{ opacity: [0.6, 1, 0.6] }}

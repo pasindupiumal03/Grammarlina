@@ -151,7 +151,7 @@ export function Hero() {
             className="text-base sm:text-lg md:text-xl text-foreground/70 text-balance max-w-2xl mx-auto mb-6 sm:mb-8 leading-relaxed px-2"
           >
             <span className="bg-gradient-to-r from-foreground/80 via-foreground/70 to-foreground/60 bg-clip-text text-transparent">
-              Session Share lets organizations grant temporary, moderated access
+              Grammarlina lets organizations grant temporary, moderated access
               to web apps without sharing passwords.
             </span>
           </motion.p>
@@ -232,7 +232,7 @@ export function Hero() {
               <iframe
                 className="w-full h-full"
                 src="https://www.youtube.com/embed/UoP-b321y78?autoplay=1&mute=1&loop=1"
-                title="Session Share Demo"
+                title="Grammarlina Demo"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen

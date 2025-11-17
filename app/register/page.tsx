@@ -368,7 +368,7 @@ export default function RegisterPage() {
               transition={{ delay: 0.4 }}
               className="text-3xl font-bold text-foreground bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text"
             >
-              Session Share
+              Grammarlina
             </motion.h1>
             <motion.p
               initial={{ opacity: 0 }}

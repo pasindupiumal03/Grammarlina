@@ -11,8 +11,8 @@ export function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <Image src="/logo.png" alt="Session Share" width={32} height={32} />
-              <span className="font-mono font-bold text-foreground">Session Share</span>
+              <Image src="/logo.png" alt="Grammarlina" width={32} height={32} />
+              <span className="font-mono font-bold text-foreground">Grammarlina</span>
             </div>
             <p className="text-sm text-foreground/60">Secure app session sharing for teams.</p>
           </div>
@@ -70,7 +70,7 @@ export function Footer() {
 
         {/* Bottom */}
         <div className="border-t border-border pt-6 sm:pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
-          <p className="text-sm text-foreground/60">© {currentYear} Session Share. All rights reserved.</p>
+          <p className="text-sm text-foreground/60">© {currentYear} Grammarlina. All rights reserved.</p>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
             <a href="/privacy" className="text-sm text-foreground/60 hover:text-foreground transition-colors py-1">
               Privacy Policy

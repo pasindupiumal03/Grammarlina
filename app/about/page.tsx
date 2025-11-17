@@ -25,7 +25,7 @@ export default function AboutUs() {
               </div>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-              About Session Share
+              About Grammarlina
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               We're on a mission to make secure collaboration effortless for teams everywhere.
@@ -44,7 +44,7 @@ export default function AboutUs() {
                     <div>
                       <h2 className="text-2xl font-semibold text-foreground mb-4">Our Story</h2>
                       <p className="text-muted-foreground leading-relaxed text-lg">
-                        Session Share was founded with a simple belief: teams shouldn't have to choose between security and productivity. 
+                        Grammarlina was founded with a simple belief: teams shouldn't have to choose between security and productivity. 
                         We recognized that traditional methods of sharing access credentials were not only insecure but also created barriers 
                         to effective collaboration in today's fast-paced work environment.
                       </p>
@@ -131,7 +131,7 @@ export default function AboutUs() {
             <Card className="border-border/50 shadow-xl backdrop-blur-sm bg-card/95">
               <CardContent className="p-6 md:p-8">
                 <div className="text-center mb-8">
-                  <h2 className="text-3xl font-bold text-foreground mb-4">Why Choose Session Share?</h2>
+                  <h2 className="text-3xl font-bold text-foreground mb-4">Why Choose Grammarlina?</h2>
                   <p className="text-muted-foreground text-lg">
                     We're building the future of secure team collaboration
                   </p>

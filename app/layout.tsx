@@ -14,10 +14,10 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  applicationName: "Session Share",
+  applicationName: "Grammarlina",
   title: {
-    default: "Session Share - Collaborative Platform",
-    template: "%s | Session Share",
+    default: "Grammarlina - Collaborative Platform",
+    template: "%s | Grammarlina",
   },
   description: "Share and collaborate on sessions with your team",
   keywords: [
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     "collaboration",
     "team workflows",
     "browser sessions",
-    "Session Share",
+    "Grammarlina",
     "grammarly cookies",
     "grammarly premium cookies",
     "grammarly premium cookie",
@@ -55,24 +55,24 @@ export const metadata: Metadata = {
     "netflix password sharing",
     "netflix login and password",
   ],
-  authors: [{ name: "Session Share" }],
-  creator: "Session Share",
-  publisher: "Session Share",
+  authors: [{ name: "Grammarlina" }],
+  creator: "Grammarlina",
+  publisher: "Grammarlina",
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
     url: siteUrl,
-    siteName: "Session Share",
-    title: "Session Share - Collaborative Platform",
+    siteName: "Grammarlina",
+    title: "Grammarlina - Collaborative Platform",
     description: "Share and collaborate on sessions with your team",
     images: [
       {
         url: "/placeholder.jpg",
         width: 1200,
         height: 630,
-        alt: "Session Share",
+        alt: "Grammarlina",
       },
     ],
     locale: "en_US",
@@ -81,7 +81,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@SessionShare",
     creator: "@SessionShare",
-    title: "Session Share - Collaborative Platform",
+    title: "Grammarlina - Collaborative Platform",
     description: "Share and collaborate on sessions with your team",
     images: ["/placeholder.jpg"],
   },

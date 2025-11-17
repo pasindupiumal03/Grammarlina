@@ -56,8 +56,8 @@ export function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/home" className="flex items-center gap-2">
-            <Image src="/logo.png" alt="Session Share" width={32} height={32} />
-            <span className="font-bold text-foreground hidden sm:inline">Session Share</span>
+            <Image src="/logo.png" alt="Grammarlina" width={32} height={32} />
+            <span className="font-bold text-foreground hidden sm:inline">Grammarlina</span>
           </Link>
 
           {/* Desktop Navigation */}

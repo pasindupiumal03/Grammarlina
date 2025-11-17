@@ -45,7 +45,7 @@ export default function PrivacyPolicy() {
               <div className="prose prose-sm md:prose-base max-w-none dark:prose-invert">
                 <section className="space-y-4">
                   <p className="text-muted-foreground leading-relaxed text-lg">
-                    At Session Share, we take your privacy seriously. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our Service.
+                    At Grammarlina, we take your privacy seriously. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our Service.
                   </p>
                 </section>
 

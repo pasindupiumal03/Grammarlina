@@ -8,7 +8,7 @@ const steps = [
   {
     icon: Download,
     title: "Install the extension",
-    description: "Team members add the Session Share extension.",
+    description: "Team members add the Grammarlina extension.",
   },
   {
     icon: Share2,
