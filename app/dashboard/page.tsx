@@ -493,7 +493,7 @@ export default function CookieDashboard() {
       <div className="flex-1 flex flex-col">
         {/* Header */}
         <AppHeader
-          title="Session Share"
+          title="Grammarlina"
           subtitle="Browser extension tool dashboard"
           variant="dashboard"
           showManageButton={true}

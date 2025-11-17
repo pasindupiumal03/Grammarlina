@@ -33,7 +33,7 @@ export function BookDemo() {
     const body = encodeURIComponent(
       `Hello,
 
-I would like to book a demo for Session Share.
+I would like to book a demo for Grammarlina.
 
 Name: ${formData.name}
 Email: ${formData.email}
@@ -68,7 +68,7 @@ Thank you!`
           className="text-center mb-10 sm:mb-12"
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-sans text-foreground mb-4">Ready to get started?</h2>
-          <p className="text-base sm:text-lg text-foreground/70 px-4">Book a demo with our team to see Session Share in action.</p>
+          <p className="text-base sm:text-lg text-foreground/70 px-4">Book a demo with our team to see Grammarlina in action.</p>
         </motion.div>
 
         <motion.div

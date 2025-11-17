@@ -49,7 +49,7 @@ export default function TermsOfService() {
                     1. Acceptance of Terms
                   </h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    By accessing and using Session Share ("the Service"), you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.
+                    By accessing and using Grammarlina ("the Service"), you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.
                   </p>
                 </section>
 
@@ -59,7 +59,7 @@ export default function TermsOfService() {
                     2. Use of Service
                   </h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    Session Share provides a platform for collaborative session management and sharing. You agree to use the Service only for lawful purposes and in accordance with these Terms.
+                    Grammarlina provides a platform for collaborative session management and sharing. You agree to use the Service only for lawful purposes and in accordance with these Terms.
                   </p>
                   <div className="bg-muted/50 p-4 rounded-lg border border-border/50">
                     <p className="text-sm font-medium mb-2">You agree NOT to:</p>
@@ -94,7 +94,7 @@ export default function TermsOfService() {
                     4. Organizations and Teams
                   </h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    Session Share allows users to create and manage organizations. As an organization owner or admin, you are responsible for:
+                    Grammarlina allows users to create and manage organizations. As an organization owner or admin, you are responsible for:
                   </p>
                   <ul className="space-y-2 text-muted-foreground ml-4">
                     <li>• Managing member access and permissions appropriately</li>
@@ -108,7 +108,7 @@ export default function TermsOfService() {
                     5. Intellectual Property
                   </h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    The Service and its original content, features, and functionality are owned by Session Share and are protected by international copyright, trademark, patent, trade secret, and other intellectual property laws.
+                    The Service and its original content, features, and functionality are owned by Grammarlina and are protected by international copyright, trademark, patent, trade secret, and other intellectual property laws.
                   </p>
                   <p className="text-muted-foreground leading-relaxed">
                     You retain all rights to the content you upload or share through the Service. By using the Service, you grant us a license to use, store, and display your content solely for the purpose of operating and providing the Service.
@@ -150,7 +150,7 @@ export default function TermsOfService() {
                     9. Limitation of Liability
                   </h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    In no event shall Session Share, its directors, employees, or agents be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or relating to your use of the Service.
+                    In no event shall Grammarlina, its directors, employees, or agents be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or relating to your use of the Service.
                   </p>
                 </section>
 

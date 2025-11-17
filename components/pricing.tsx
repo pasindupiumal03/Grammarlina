@@ -30,11 +30,11 @@ export function Pricing() {
 
   const plans = [
     {
-      name: "Free",
-      price: "$0",
+      name: "Standard",
+      price: "$2.99",
       description: "Perfect for getting started",
       features: ["1 organization", "Up to 5 active sessions", "Moderator controls", "Email support"],
-      cta: "Start free",
+      cta: "Start now",
       highlighted: false,
     },
     {
