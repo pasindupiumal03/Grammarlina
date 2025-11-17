@@ -8,9 +8,11 @@ import { AuthProvider } from "@/lib/auth-context";
 import { ReduxProvider } from "@/lib/redux-provider";
 import { GoogleAuthProvider } from "@/lib/google-oauth-provider";
 import { Suspense } from "react";
+import Script from "next/script";
 import "./globals.css";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-3D4YX62NJJ";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -124,6 +126,22 @@ export default function RootLayout({
           </ReduxProvider>
         </Suspense>
         <Analytics />
+        {GA_MEASUREMENT_ID && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${GA_MEASUREMENT_ID}');
+              `}
+            </Script>
+          </>
+        )}
       </body>
     </html>
   );
