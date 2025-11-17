@@ -705,8 +705,8 @@ export default function CookieDashboard() {
                       4
                     </div>
                     <p className="text-sm">
-                      Install the CodeScale Tools Helper first and then the
-                      CodeScale Tools extension after that
+                      Install the Grammarlina Helper first and then the Grammarlina extension after
+                      that
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
@@ -739,7 +739,7 @@ export default function CookieDashboard() {
                   Download Extension
                 </CardTitle>
                 <CardDescription>
-                  Download the CodeScale browser extension to use with this
+                  Download the Grammarlina browser extension to use with this
                   dashboard
                 </CardDescription>
               </CardHeader>
