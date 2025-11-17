@@ -16,7 +16,6 @@ export function Navbar() {
     { href: "#features", label: "Features" },
     { href: "#how-it-works", label: "How it Works" },
     { href: "#pricing", label: "Pricing" },
-    { href: "#download-extension", label: "Download Extension" },
   ]
 
   const scrollToSection = (href: string) => {
@@ -40,13 +39,7 @@ export function Navbar() {
   }
 
   const handleBookDemoClick = () => {
-    if (pathname === "/home" || pathname === "/") {
-      // If we're on the home page or root, just scroll to the section
-      scrollToSection("#book-demo")
-    } else {
-      // If we're on another page, navigate to home first with the hash
-      router.push("/home#book-demo")
-    }
+    window.open("https://grammarlina.gumroad.com/l/cuqwp?_gl=1*1uyyupa*_ga*MTUwMTE1Nzg4LjE3NTY2Njc4OTA.*_ga_6LJN6D94N6*czE3NjMzOTA5ODMkbzE0JGcxJHQxNzYzMzkxMjU2JGo1OSRsMCRoMA..", "_blank")
     setIsOpen(false)
   }
 
@@ -78,7 +71,7 @@ export function Navbar() {
             <Button variant="ghost" size="sm" onClick={() => router.push("/login")}>
               Sign in
             </Button>
-            <Button size="sm" onClick={handleBookDemoClick}>Download Extension</Button>
+            <Button size="sm" onClick={handleBookDemoClick}>Subscribe</Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -106,7 +99,7 @@ export function Navbar() {
                 Sign in
               </Button>
               <Button size="sm" className="flex-1 py-3" onClick={handleBookDemoClick}>
-                Download Extension
+                Subscribe
               </Button>
             </div>
           </div>

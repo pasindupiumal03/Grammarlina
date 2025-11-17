@@ -434,7 +434,7 @@ export default function CookieDashboard() {
 
   const handleExtensionDownload = () => {
     const downloadUrl =
-      "https://drive.google.com/drive/folders/1n-igBx01c7u1nAZfs_KeNYI2B1Wu-0_x";
+      "https://drive.google.com/drive/u/6/folders/1kKBNOQ17EgVHi2UJgEtqzOJJaobho2n4";
     window.open(downloadUrl, "_blank");
 
     toast({
@@ -736,7 +736,7 @@ export default function CookieDashboard() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Download className="w-5 h-5" />
-                  Download Extension
+                  Download Extensions
                 </CardTitle>
                 <CardDescription>
                   Download the Grammarlina browser extension to use with this

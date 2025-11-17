@@ -21,8 +21,8 @@ export function Pricing() {
   }
 
   const handleCtaClick = (cta: string) => {
-    if (cta === "Start free") {
-      router.push("/login")
+    if (cta === "Start free" || cta === "Start now" || cta === "Unlock Premium") {
+      window.open("https://grammarlina.gumroad.com/l/cuqwp?_gl=1*1uyyupa*_ga*MTUwMTE1Nzg4LjE3NTY2Njc4OTA.*_ga_6LJN6D94N6*czE3NjMzOTA5ODMkbzE0JGcxJHQxNzYzMzkxMjU2JGo1OSRsMCRoMA..", "_blank")
     } else if (cta === "Book a call") {
       scrollToBookDemo()
     }
@@ -32,15 +32,20 @@ export function Pricing() {
     {
       name: "Standard",
       price: "$2.99",
-      description: "Perfect for everyday users",
-      features: ["Writing enhancement", "Plagiarism checker", "Unlimited usage", "Email support"],
-      cta: "Start now",
+      description: "Full Grammarly Premium for a single user",
+      features: [
+        "Official Grammarly Premium seat",
+        "Unlimited rewrites, tone & clarity checks",
+        "AI plagiarism detection included",
+        "$2.99 monthly billing, cancel anytime",
+      ],
+      cta: "Unlock Premium",
       highlighted: false,
     },
     {
       name: "Pro / Team",
       price: "Contact Us",
-      description: "For professionals, agencies, and editors",
+      description: "$2.99 seats for teams, agencies, and editors",
       features: ["Includes everything in Standard plus",
         "Multi-seat/team support",
         "Usage insights & history",

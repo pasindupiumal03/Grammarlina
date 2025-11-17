@@ -8,17 +8,17 @@ const steps = [
   {
     icon: Download,
     title: "Install the extension",
-    description: "Add the Grammarlina browser extension to Chrome or Edge.",
+    description: "Add the Grammarlina browser extension to Chrome or Edge—it unlocks Grammarly Premium for your login.",
   },
   {
     icon: Share2,
     title: "Activate Your Tools",
-    description: 'Start writing anywhere online and instantly unlock advanced enhancement & plagiarism features.',
+    description: "Sign in with your Grammarly account and your $2.99 Premium seat activates instantly.",
   },
   {
     icon: Lock,
     title: "Enhance Your Content",
-    description: "Refine, correct, and check originality in real time—directly inside your browser.",
+    description: "Write anywhere and enjoy the full Premium experience—rewrites, plagiarism checks, tone shifts—at the 90% discount.",
   },
 ]
 
@@ -54,7 +54,7 @@ export function HowItWorks() {
           className="text-center mb-12 sm:mb-16"
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-sans text-foreground mb-4">How it Works</h2>
-          <p className="text-base sm:text-lg text-foreground/70 max-w-2xl mx-auto px-4">Get started in three simple steps.</p>
+          <p className="text-base sm:text-lg text-foreground/70 max-w-2xl mx-auto px-4">Three quick steps and you&apos;re enjoying Grammarly Premium for $2.99/month.</p>
         </motion.div>
 
         <motion.div

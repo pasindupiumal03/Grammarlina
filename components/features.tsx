@@ -8,42 +8,42 @@ const features = [
   {
     icon: Zap,
     title: "AI Writing Enhancer",
-    description: "Get advanced suggestions for clarity, tone, and correctness across emails, documents, and web editors.",
+    description: "The full Grammarly Premium tone, clarity, and correctness suggestions—no feature caps, even at $2.99.",
   },
   {
     icon: Shield,
-    title: "Custom Plagiarism Checker",
-    description: "Instantly scan your content for originality using our built-in browser tool.",
+    title: "Plagiarism Shield",
+    description: "Run unlimited originality scans with the same AI Grammarly uses, included in your $2.99 plan.",
   },
   {
     icon: Lock,
     title: "Real-time Editing Tools",
-    description: "Receive smart recommendations as you type—rewrite, refine, and optimize with one click.",
+    description: "Rewrite, refine, and optimize in-line across every site—premium buttons stay unlocked.",
   },
   {
     icon: Users,
     title: "Multi-Device Support",
-    description: "Works seamlessly on Chrome and Edge (Firefox coming soon).",
+    description: "Bring your discounted Premium seat to Chrome and Edge today (Firefox coming soon).",
   },
   {
     icon: Clock,
     title: "Secure & Private",
-    description: "Your writing stays on your device—no account-sharing or risky workarounds.",
+    description: "Own seat, no account sharing tricks—keep compliance happy while saving 90%.",
   },
   {
     icon: Chrome,
     title: "Effortless Updates",
-    description: "New features and improvements roll out automatically.",
+    description: "Every Grammarly Premium update lands automatically without extra charges.",
   },
   {
     icon: Fingerprint,
     title: "SSO Friendly",
-    description: "Plays nicely with your existing login flows.",
+    description: "Keep your normal Grammarly login; we simply provision it at the lower monthly rate.",
   },
   {
     icon: UserPlus,
     title: "Unlimited Usage",
-    description: "Analyze and enhance as much as you want without restrictions.",
+    description: "Use every premium check, prompt, and analysis as often as you need for one flat $2.99 fee.",
   },
 ]
 
@@ -78,9 +78,9 @@ export function Features() {
           viewport={{ once: true }}
           className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-sans text-foreground mb-4">Powerful Features</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-sans text-foreground mb-4">Premium Features, Tiny Price</h2>
           <p className="text-base sm:text-lg text-foreground/70 max-w-2xl mx-auto px-4">
-            Everything you need to improve your writing and run plagiarism checks effortlessly.
+            Everything inside Grammarly Premium—rewrites, tone checks, plagiarism scanning—now bundled for $2.99/month.
           </p>
         </motion.div>
 

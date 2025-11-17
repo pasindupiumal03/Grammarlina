@@ -123,7 +123,7 @@ export function Hero() {
                 backgroundClip: "text",
               }}
             >
-              New • Grammarly Premium added
+              Limited Offer • Grammarly Premium $2.99/mo
             </span>
           </Badge>
         </motion.div>
@@ -142,7 +142,7 @@ export function Hero() {
             className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-sans text-balance leading-tight mb-4 sm:mb-6"
           >
             <span className="bg-gradient-to-r from-foreground via-foreground to-foreground/80 bg-clip-text text-transparent">
-              Enhance Every Word.
+              Grammarly Premium Access.
             </span>
             <br />
             <motion.span
@@ -151,7 +151,7 @@ export function Hero() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.5 }}
             >
-              Write Clearly. Confidently. Forever.
+              Every feature. Just $2.99/month.
             </motion.span>
           </motion.h1>
           <motion.p
@@ -161,7 +161,7 @@ export function Hero() {
             className="text-base sm:text-lg md:text-xl text-foreground/70 text-balance max-w-2xl mx-auto mb-6 sm:mb-8 leading-relaxed px-2"
           >
             <span className="bg-gradient-to-r from-foreground/80 via-foreground/70 to-foreground/60 bg-clip-text text-transparent">
-              Unlock premium-level writing enhancements and an AI-powered plagiarism checker — all in one simple monthly subscription. <br />Get clear, confident writing every time you type.
+              Stop paying $30/month elsewhere. With Grammarlina you receive the complete Grammarly Premium experience—advanced rewrites, tone and clarity coaching, plus the AI-powered plagiarism checker—for only $2.99 per month.
             </span>
           </motion.p>
         </div>
@@ -188,7 +188,7 @@ export function Hero() {
               className="gap-2 bg-gradient-to-r from-primary via-primary to-primary/90 hover:from-primary/90 hover:via-primary hover:to-primary shadow-xl shadow-primary/25 border-0 text-white font-semibold px-6 sm:px-8 py-4 sm:py-6 h-auto w-full sm:w-auto"
               onClick={scrollToPricing}
             >
-              Start Now
+              Unlock Premium
               <motion.div
                 animate={{ x: [0, 4, 0] }}
                 transition={{
