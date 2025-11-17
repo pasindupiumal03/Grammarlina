@@ -143,7 +143,6 @@ export default function CookieDashboard() {
       dispatch(logout());
 
       setTimeout(() => {
-        
         window.location.href = "/";
       }, 1000);
 
@@ -411,22 +410,22 @@ export default function CookieDashboard() {
       return payload;
     } catch (error: any) {
       console.error("Error decrypting cookies:", error);
-      
+
       // Handle expired JWT tokens specifically
       // In jose v6, errors have a 'code' property instead of being specific error classes
-      const isExpiredError = 
-        error?.code === "ERR_JWT_EXPIRED" || 
-        error?.message?.includes("exp") || 
+      const isExpiredError =
+        error?.code === "ERR_JWT_EXPIRED" ||
+        error?.message?.includes("exp") ||
         error?.message?.includes("expired") ||
         error?.message?.includes("JWTExpired");
-      
+
       if (isExpiredError) {
         // The JWT token has expired - throw a user-friendly error message
         throw new Error(
           "The encrypted cookies have expired. Please contact your organization administrator to refresh the service cookies."
         );
       }
-      
+
       const errorMessage =
         error instanceof Error ? error.message : "Unknown error";
       throw new Error(`Failed to decrypt cookies: ${errorMessage}`);
@@ -480,13 +479,15 @@ export default function CookieDashboard() {
         ))}
 
         {/* Add Organization Button */}
-        <button
-          onClick={handleAddOrganization}
-          className="w-16 h-16 rounded-full border-2 border-dashed border-muted-foreground/50 bg-muted/30 hover:border-primary/50 hover:bg-primary/5 transition-all duration-200 hover:scale-105 flex items-center justify-center"
-          title="Add Organization"
-        >
-          <Plus className="w-6 h-6 text-muted-foreground" />
-        </button>
+        {isAdmin && (
+          <button
+            onClick={handleAddOrganization}
+            className="w-16 h-16 rounded-full border-2 border-dashed border-muted-foreground/50 bg-muted/30 hover:border-primary/50 hover:bg-primary/5 transition-all duration-200 hover:scale-105 flex items-center justify-center"
+            title="Add Organization"
+          >
+            <Plus className="w-6 h-6 text-muted-foreground" />
+          </button>
+        )}
       </div>
 
       {/* Main Content Area */}
