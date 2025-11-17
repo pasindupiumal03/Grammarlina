@@ -123,7 +123,7 @@ export function Hero() {
                 backgroundClip: "text",
               }}
             >
-              New • Admin Extension now in live
+              New • Grammarly Premium added
             </span>
           </Badge>
         </motion.div>
@@ -142,7 +142,7 @@ export function Hero() {
             className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-sans text-balance leading-tight mb-4 sm:mb-6"
           >
             <span className="bg-gradient-to-r from-foreground via-foreground to-foreground/80 bg-clip-text text-transparent">
-              Get Grammarly Premium.
+              Enhance Every Word.
             </span>
             <br />
             <motion.span
@@ -161,7 +161,7 @@ export function Hero() {
             className="text-base sm:text-lg md:text-xl text-foreground/70 text-balance max-w-2xl mx-auto mb-6 sm:mb-8 leading-relaxed px-2"
           >
             <span className="bg-gradient-to-r from-foreground/80 via-foreground/70 to-foreground/60 bg-clip-text text-transparent">
-              Enjoy lifetime access to advanced writing tools and your own custom plagiarism checker—all for a single one-time payment.
+              Unlock premium-level writing enhancements and an AI-powered plagiarism checker — all in one simple monthly subscription. <br />Get clear, confident writing every time you type.
             </span>
           </motion.p>
         </div>

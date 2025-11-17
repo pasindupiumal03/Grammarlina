@@ -29,11 +29,11 @@ export function BookDemo() {
     setLoading(true)
 
     // Format the email body with all form data
-    const subject = encodeURIComponent("Book a Demo Request")
+    const subject = encodeURIComponent("Book a Call Request")
     const body = encodeURIComponent(
       `Hello,
 
-I would like to book a demo for Grammarlina.
+I would like to Book a Call for Grammarlina.
 
 Name: ${formData.name}
 Email: ${formData.email}
@@ -45,7 +45,7 @@ Thank you!`
     )
 
     // Create mailto link
-    const mailtoLink = `mailto:contact@grammarlina.com?subject=${subject}&body=${body}`
+    const mailtoLink = `mailto:admin@grammarlina.com?subject=${subject}&body=${body}`
 
     // Open email client
     window.location.href = mailtoLink
@@ -68,7 +68,7 @@ Thank you!`
           className="text-center mb-10 sm:mb-12"
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-sans text-foreground mb-4">Ready to get started?</h2>
-          <p className="text-base sm:text-lg text-foreground/70 px-4">Book a demo with our team to see Grammarlina in action.</p>
+          <p className="text-base sm:text-lg text-foreground/70 px-4">Book a Call with our team to see Grammarlina in action.</p>
         </motion.div>
 
         <motion.div
@@ -167,15 +167,15 @@ Thank you!`
                 </div>
 
                 <Button type="submit" className="w-full" disabled={loading}>
-                  {loading ? "Sending..." : "Book a Demo"}
+                  {loading ? "Sending..." : "Book a Call"}
                 </Button>
               </form>
             )}
 
             <div className="mt-8 pt-8 border-t border-border text-center">
               <p className="text-sm text-foreground/70 mb-2">Or email us directly:</p>
-              <a href="mailto:contact@grammarlina.com" className="text-primary font-semibold hover:underline">
-                contact@grammarlina.com
+              <a href="mailto:admin@grammarlina.com" className="text-primary font-semibold hover:underline">
+                admin@grammarlina.com
               </a>
             </div>
           </Card>
