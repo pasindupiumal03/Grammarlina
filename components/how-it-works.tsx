@@ -8,17 +8,17 @@ const steps = [
   {
     icon: Download,
     title: "Install the extension",
-    description: "Team members add the Grammarlina extension.",
+    description: "Add the Grammarlina browser extension to Chrome or Edge.",
   },
   {
     icon: Share2,
-    title: "Start a session",
-    description: 'Click "Share" on a supported app; a temporary, scoped session is created.',
+    title: "Activate Your Tools",
+    description: 'Start writing anywhere online and instantly unlock advanced enhancement & plagiarism features.',
   },
   {
     icon: Lock,
-    title: "Control access",
-    description: "Admins use the Admin Extension to approve, update, or revoke in real time.",
+    title: "Enhance Your Content",
+    description: "Refine, correct, and check originality in real time—directly inside your browser.",
   },
 ]
 

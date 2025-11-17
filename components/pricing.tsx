@@ -32,21 +32,21 @@ export function Pricing() {
     {
       name: "Standard",
       price: "$2.99",
-      description: "Perfect for getting started",
-      features: ["1 organization", "Up to 5 active sessions", "Moderator controls", "Email support"],
+      description: "Perfect for everyday users",
+      features: ["Writing enhancement", "Plagiarism checker", "Unlimited usage", "Email support"],
       cta: "Start now",
       highlighted: false,
     },
     {
       name: "Pro / Team",
-      price: "Talk to us",
-      description: "For growing teams",
-      features: [
-        "Unlimited organizations",
-        "Unlimited active sessions",
-        "Advanced editor roles & audit logs",
-        "SSO & SCIM (coming soon)",
+      price: "Contact Us",
+      description: "For professionals, agencies, and editors",
+      features: ["Includes everything in Standard plus",
+        "Multi-seat/team support",
+        "Usage insights & history",
+        "Advanced writing controls",
         "Priority support",
+        "API access (coming soon)",
       ],
       cta: "Book a call",
       highlighted: true,
@@ -106,7 +106,7 @@ export function Pricing() {
                 <p className="text-sm text-foreground/60 mb-4">{plan.description}</p>
                 <div className="mb-6">
                   <span className="text-3xl sm:text-4xl font-bold text-foreground">{plan.price}</span>
-                  {plan.price !== "Talk to us" && <span className="text-foreground/60 ml-2">/month</span>}
+                  {plan.price !== "Contact Us" && <span className="text-foreground/60 ml-2">/month</span>}
                 </div>
 
                 <Button 
