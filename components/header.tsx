@@ -35,7 +35,7 @@ export function Header() {
             <a href="#pricing">Sign In</a>
           </Button>
           <Button asChild>
-            <a href="#pricing">Start Free Trial</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeVYKiRIa7wM1OUs48PQiot0et2dYJtGIVE92lD4oVKUb5nKw/viewform?usp=dialog">Start Free Trial</a>
           </Button>
         </div>
 
