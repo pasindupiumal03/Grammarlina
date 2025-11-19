@@ -7,6 +7,10 @@ import { useState } from 'react'
 export function PricingPlans() {
   const [showTrialInfo, setShowTrialInfo] = useState(false)
 
+  const handleStartTrial = () => {
+    window.open('https://docs.google.com/forms/d/e/1FAIpQLSeVYKiRIa7wM1OUs48PQiot0et2dYJtGIVE92lD4oVKUb5nKw/viewform?usp=dialog', '_blank')
+  }
+
   const plans = [
     {
       name: 'Monthly',
@@ -90,7 +94,7 @@ export function PricingPlans() {
                   className={`w-full text-base font-semibold py-6 ${
                     plan.popular ? '' : 'bg-muted text-foreground hover:bg-muted/80'
                   }`}
-                  onClick={() => setShowTrialInfo(!showTrialInfo)}
+                  onClick={handleStartTrial}
                   variant={plan.popular ? 'default' : 'outline'}
                 >
                   {plan.cta}
