@@ -1,100 +1,61 @@
-"use client"
-
-import { Download, Share2, Lock } from "lucide-react"
-import { motion } from "framer-motion"
-import { Card } from "@/components/ui/card"
+import { Download, Key, Zap } from 'lucide-react'
 
 const steps = [
   {
+    number: '1',
     icon: Download,
-    title: "Install the extension",
-    description: "Add the Grammarlina browser extension to Chrome or Edge.",
+    title: 'Claim Your Trial',
+    description: 'Start your 14-day free trial instantly. No credit card required. Get immediate access to all premium features.',
   },
   {
-    icon: Share2,
-    title: "Activate Your Tools",
-    description: 'Start writing anywhere online and instantly unlock advanced enhancement & plagiarism features.',
+    number: '2',
+    icon: Key,
+    title: 'Activate Your Account',
+    description: 'Follow our simple setup process. Link your Grammarly account to your browser or apps in seconds.',
   },
   {
-    icon: Lock,
-    title: "Enhance Your Content",
-    description: "Refine, correct, and check originality in real time—directly inside your browser.",
+    number: '3',
+    icon: Zap,
+    title: 'Start Writing Better',
+    description: 'Enjoy unlimited premium writing features. Watch as Grammarly enhances your writing across all platforms.',
   },
 ]
 
 export function HowItWorks() {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.1,
-      },
-    },
-  }
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5 },
-    },
-  }
-
   return (
-    <section id="how-it-works" className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-foreground/2">
-      <div className="max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mb-12 sm:mb-16"
-        >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-sans text-foreground mb-4">How it Works</h2>
-          <p className="text-base sm:text-lg text-foreground/70 max-w-2xl mx-auto px-4">Get started in three simple steps.</p>
-        </motion.div>
+    <section id="how-it-works" className="py-16 sm:py-24 md:py-32">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center space-y-4 mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground">
+            How It Works
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Three quick steps to affordable, premium writing tools
+          </p>
+        </div>
 
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16"
-        >
+        <div className="grid md:grid-cols-3 gap-8">
           {steps.map((step, index) => {
             const Icon = step.icon
             return (
-              <motion.div key={index} variants={itemVariants} className="relative">
-                {/* Connector line */}
+              <div key={index} className="relative">
+                <div className="bg-background border border-border rounded-xl p-8 text-center h-full flex flex-col">
+                  <div className="flex items-center justify-center w-14 h-14 rounded-lg bg-primary text-primary-foreground font-bold text-xl mx-auto mb-6">
+                    {step.number}
+                  </div>
+                  <Icon className="w-12 h-12 text-primary mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold text-foreground mb-3">{step.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{step.description}</p>
+                </div>
                 {index < steps.length - 1 && (
-                  <motion.div
-                    initial={{ scaleX: 0 }}
-                    whileInView={{ scaleX: 1 }}
-                    transition={{ duration: 0.8, delay: 0.3 }}
-                    viewport={{ once: true }}
-                    className="hidden md:block absolute top-20 left-full w-full h-0.5 bg-gradient-to-r from-primary/50 to-transparent origin-left"
-                  />
+                  <div className="hidden md:block absolute -right-4 top-1/2 transform -translate-y-1/2">
+                    <div className="text-primary text-3xl">→</div>
+                  </div>
                 )}
-
-                <Card className="p-6 sm:p-8 text-center hover:shadow-lg transition-shadow h-full w-full max-w-sm sm:max-w-none mx-auto">
-                  <motion.div
-                    whileHover={{ scale: 1.1 }}
-                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                    className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6"
-                  >
-                    <Icon className="w-8 h-8 text-primary" />
-                  </motion.div>
-                  <div className="text-sm text-primary mb-2">Step {index + 1}</div>
-                  <h3 className="font-sans font-semibold text-foreground mb-3 text-lg">{step.title}</h3>
-                  <p className="text-sm text-foreground/70">{step.description}</p>
-                </Card>
-              </motion.div>
+              </div>
             )
           })}
-        </motion.div>
+        </div>
       </div>
     </section>
   )

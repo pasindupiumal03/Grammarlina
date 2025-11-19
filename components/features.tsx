@@ -1,135 +1,81 @@
-"use client"
-
-import { Shield, Zap, Lock, Users, BarChart3, Clock, Chrome, Fingerprint, UserPlus } from "lucide-react"
-import { motion } from "framer-motion"
-import { Card } from "@/components/ui/card"
+import { CheckCircle2, Zap, BarChart3, MessageSquare, Lightbulb, Settings } from 'lucide-react'
 
 const features = [
   {
+    icon: CheckCircle2,
+    title: 'AI Writing Enhancements',
+    description: 'Get intelligent suggestions for tone, clarity, and style with advanced AI analysis.',
+  },
+  {
     icon: Zap,
-    title: "AI Writing Enhancer",
-    description: "Get advanced suggestions for clarity, tone, and correctness across emails, documents, and web editors.",
+    title: 'Grammar & Spell Check',
+    description: 'Catch every error instantly with our powerful grammar checking engine.',
   },
   {
-    icon: Shield,
-    title: "Custom Plagiarism Checker",
-    description: "Instantly scan your content for originality using our built-in browser tool.",
+    icon: BarChart3,
+    title: 'Writing Analytics',
+    description: 'Track your writing progress with detailed insights and personalized feedback.',
   },
   {
-    icon: Lock,
-    title: "Real-time Editing Tools",
-    description: "Receive smart recommendations as you type—rewrite, refine, and optimize with one click.",
+    icon: MessageSquare,
+    title: 'Tone Detector',
+    description: 'Ensure your message has the right tone for every situation and audience.',
   },
   {
-    icon: Users,
-    title: "Multi-Device Support",
-    description: "Works seamlessly on Chrome and Edge (Firefox coming soon).",
+    icon: Lightbulb,
+    title: 'Style Guide',
+    description: 'Follow your style guide automatically across all your writing.',
   },
   {
-    icon: Clock,
-    title: "Secure & Private",
-    description: "Your writing stays on your device—no account-sharing or risky workarounds.",
-  },
-  {
-    icon: Chrome,
-    title: "Effortless Updates",
-    description: "New features and improvements roll out automatically.",
-  },
-  {
-    icon: Fingerprint,
-    title: "SSO Friendly",
-    description: "Plays nicely with your existing login flows.",
-  },
-  {
-    icon: UserPlus,
-    title: "Unlimited Usage",
-    description: "Analyze and enhance as much as you want without restrictions.",
+    icon: Settings,
+    title: 'Full Customization',
+    description: 'Personalize Grammarly to match your unique writing style and preferences.',
   },
 ]
 
 export function Features() {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2,
-      },
-    },
-  }
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5 },
-    },
-  }
-
   return (
-    <section id="features" className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-background">
-      <div className="max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mb-12 sm:mb-16"
-        >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-sans text-foreground mb-4">Powerful Features</h2>
-          <p className="text-base sm:text-lg text-foreground/70 max-w-2xl mx-auto px-4">
-            Everything you need to improve your writing and run plagiarism checks effortlessly.
-          </p>
-        </motion.div>
+    <section id="features" className="py-16 sm:py-24 md:py-32 bg-card/30">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-center mb-12">
+          <div className="relative">
+            <img 
+              src="/grammarly-logo.png" 
+              alt="Grammarly Logo" 
+              className="h-16 sm:h-20 md:h-24 object-contain"
+            />
+          </div>
+        </div>
 
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-12 sm:mb-16 justify-items-center"
-        >
+        <div className="text-center space-y-4 mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground">
+            Premium Features, Tiny Price
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Everything you need to write better, faster, and with confidence
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => {
             const Icon = feature.icon
             return (
-              <motion.div key={index} variants={itemVariants} className="w-full max-w-sm sm:max-w-none">
-                <Card className="p-4 sm:p-6 hover:shadow-lg transition-shadow h-full w-full max-w-sm sm:max-w-none">
-                  <motion.div whileHover={{ scale: 1.1 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}>
-                    <Icon className="w-8 h-8 text-primary mb-4" />
-                  </motion.div>
-                  <h3 className="font-sans font-semibold text-foreground mb-2">{feature.title}</h3>
-                  <p className="text-sm text-foreground/70">{feature.description}</p>
-                </Card>
-              </motion.div>
+              <div key={index} className="bg-background border border-border rounded-xl p-6 hover:border-primary/50 transition-colors">
+                <div className="flex gap-4">
+                  <div className="flex-shrink-0">
+                    <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10">
+                      <Icon className="w-6 h-6 text-primary" />
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-foreground mb-2">{feature.title}</h3>
+                    <p className="text-sm text-muted-foreground">{feature.description}</p>
+                  </div>
+                </div>
+              </div>
             )
           })}
-        </motion.div>
-
-        {/* Supported Apps Band */}
-        {/* <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="bg-foreground/5 rounded-2xl border border-border p-6 sm:p-8 mx-2 sm:mx-0"
-        >
-          <p className="text-center text-sm text-foreground/60 mb-6">Supported apps</p>
-          <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 text-foreground/50 px-4">
-            <span className="text-sm font-semibold">ChatGPT</span>
-            <span className="text-border">•</span>
-            <span className="text-sm font-semibold">Netflix</span>
-            <span className="text-border">•</span>
-            <span className="text-sm font-semibold">Expo</span>
-            <span className="text-border">•</span>
-            <span className="text-sm font-semibold">Grok</span>
-            <span className="text-border">•</span>
-            <span className="text-sm font-semibold">Grammarly</span>
-            <span className="text-border">•</span>
-            <span className="text-sm font-semibold">+ more coming</span>
-          </div>
-        </motion.div> */}
+        </div>
       </div>
     </section>
   )

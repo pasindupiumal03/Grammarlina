@@ -29,23 +29,23 @@ export function Navbar() {
   const handleNavLinkClick = (href: string, e: React.MouseEvent) => {
     e.preventDefault()
     
-    if (pathname === "/home" || pathname === "/") {
+    if (pathname === "/" || pathname === "/") {
       // If we're on the home page or root, just scroll to the section
       scrollToSection(href)
     } else {
       // If we're on another page, navigate to home first with the hash
-      router.push(`/home${href}`)
+      router.push(`/${href}`)
     }
     setIsOpen(false)
   }
 
   const handleBookDemoClick = () => {
-    if (pathname === "/home" || pathname === "/") {
+    if (pathname === "/" || pathname === "/") {
       // If we're on the home page or root, just scroll to the section
       scrollToSection("#book-demo")
     } else {
       // If we're on another page, navigate to home first with the hash
-      router.push("/home#book-demo")
+      router.push("/#book-demo")
     }
     setIsOpen(false)
   }
@@ -55,7 +55,7 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/home" className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-2">
             <Image src="/logo.svg" alt="Grammarlina" width={32} height={32} />
             <span className="font-bold text-foreground hidden sm:inline">Grammarlina</span>
           </Link>
