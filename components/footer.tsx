@@ -1,83 +1,76 @@
-import { Github, Linkedin, Twitter } from "lucide-react"
-import Image from "next/image"
+import Link from 'next/link'
+import Image from 'next/image'
+import { Mail, Globe } from 'lucide-react'
 
 export function Footer() {
-  const currentYear = new Date().getFullYear()
-
   return (
-    <footer className="border-t border-border bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 mb-8">
-          {/* Brand */}
-          <div>
-            <div className="flex items-center gap-2 mb-4">
-              <Image src="/logo.svg" alt="Grammarlina" width={32} height={32} />
-              <span className="font-mono font-bold text-foreground">Grammarlina</span>
-            </div>
-            <p className="text-sm text-foreground/60">Smart writing assistance & originality checking — right in your browser.</p>
+    <footer className="bg-card/50 border-t border-border py-12 sm:py-16 md:py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid md:grid-cols-4 gap-8 mb-12">
+          <div className="space-y-4">
+            <Link href="/" className="flex items-center gap-2 w-fit">
+              <Image 
+                src="/logo.svg" 
+                alt="Grammarlina" 
+                width={32} 
+                height={32}
+                className="w-8 h-8"
+              />
+              <span className="font-bold text-foreground">Grammarlina</span>
+            </Link>
+            <p className="text-sm text-muted-foreground">
+              Affordable premium writing tools for everyone.
+            </p>
           </div>
 
-          {/* Links */}
           <div>
-            <h4 className="font-mono font-semibold text-foreground mb-4">Product</h4>
-            <ul className="space-y-2">
-              <li>
-                <a href="#features" className="text-sm text-foreground/60 hover:text-foreground transition-colors">
-                  Features
-                </a>
-              </li>
-              <li>
-                <a href="#pricing" className="text-sm text-foreground/60 hover:text-foreground transition-colors">
-                  Pricing
-                </a>
-              </li>
+            <h4 className="font-semibold text-foreground mb-4">Product</h4>
+            <ul className="space-y-2 text-sm">
+              <li><a href="#features" className="text-muted-foreground hover:text-foreground transition">Features</a></li>
+              <li><a href="#pricing" className="text-muted-foreground hover:text-foreground transition">Pricing</a></li>
+              <li><a href="#how-it-works" className="text-muted-foreground hover:text-foreground transition">How It Works</a></li>
+              <li><a href="#faq" className="text-muted-foreground hover:text-foreground transition">FAQ</a></li>
             </ul>
           </div>
 
-          {/* Company */}
           <div>
-            <h4 className="font-mono font-semibold text-foreground mb-4">Company</h4>
-            <ul className="space-y-2">
-              <li>
-                <a href="/about" className="text-sm text-foreground/60 hover:text-foreground transition-colors">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="/contact" className="text-sm text-foreground/60 hover:text-foreground transition-colors">
-                  Contact Us
-                </a>
-              </li>
+            <h4 className="font-semibold text-foreground mb-4">Company</h4>
+            <ul className="space-y-2 text-sm">
+              <li><a href="/about" className="text-muted-foreground hover:text-foreground transition">About</a></li>
+              <li><a href="#" className="text-muted-foreground hover:text-foreground transition">Blog</a></li>
+              <li><a href="/contact" className="text-muted-foreground hover:text-foreground transition">Contact</a></li>
+              <li><a href="/privacy" className="text-muted-foreground hover:text-foreground transition">Privacy</a></li>
             </ul>
           </div>
 
-          {/* Social */}
           <div>
-            <h4 className="font-mono font-semibold text-foreground mb-4">Follow</h4>
-            <div className="flex gap-4">
-              <a href="#" className="text-foreground/60 hover:text-foreground transition-colors">
-                <Twitter size={20} />
-              </a>
-              <a href="#" className="text-foreground/60 hover:text-foreground transition-colors">
-                <Github size={20} />
-              </a>
-              <a href="#" className="text-foreground/60 hover:text-foreground transition-colors">
-                <Linkedin size={20} />
-              </a>
-            </div>
+            <h4 className="font-semibold text-foreground mb-4">Contact</h4>
+            <ul className="space-y-3 text-sm">
+              <li className="flex items-center gap-2">
+                <Mail className="w-4 h-4 text-primary" />
+                <a href="mailto:support@grammarlina.com" className="text-muted-foreground hover:text-foreground transition">
+                  support@grammarlina.com
+                </a>
+              </li>
+              <li className="flex items-center gap-2">
+                <Globe className="w-4 h-4 text-primary" />
+                <a href="#" className="text-muted-foreground hover:text-foreground transition">
+                  www.grammarlina.com
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
 
-        {/* Bottom */}
-        <div className="border-t border-border pt-6 sm:pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
-          <p className="text-sm text-foreground/60">© {currentYear} Grammarlina. All rights reserved.</p>
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
-            <a href="/privacy" className="text-sm text-foreground/60 hover:text-foreground transition-colors py-1">
-              Privacy Policy
-            </a>
-            <a href="/terms" className="text-sm text-foreground/60 hover:text-foreground transition-colors py-1">
-              Terms of Service
-            </a>
+        <div className="border-t border-border pt-8">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p className="text-xs text-muted-foreground text-center sm:text-left">
+              © 2025 Grammarlina. All rights reserved.
+            </p>
+            <div className="flex gap-6 text-xs">
+              <a href="/privacy" className="text-muted-foreground hover:text-foreground transition">Privacy Policy</a>
+              <a href="/terms" className="text-muted-foreground hover:text-foreground transition">Terms of Service</a>
+            </div>
           </div>
         </div>
       </div>

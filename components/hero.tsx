@@ -1,223 +1,102 @@
-"use client";
+'use client'
 
-import { ArrowRight, Sparkles, Shield, Zap } from "lucide-react";
-import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { useRouter } from "next/navigation";
+import { Button } from '@/components/ui/button'
+import { ArrowRight, CheckCircle } from 'lucide-react'
 
 export function Hero() {
-  const router = useRouter();
-  const scrollToBookDemo = () => {
-    const el = document.getElementById("book-demo");
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
-    } else {
-      router.push("/#book-demo");
-    }
-  };
-  
-  const scrollToPricing = () => {
-    const el = document.getElementById("pricing");
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
-    } else {
-      router.push("/#pricing");
-    }
-  };
-
   return (
-    <section className="relative overflow-hidden pt-16 pb-24 sm:pt-20 sm:pb-32 px-4 sm:px-6 lg:px-8 bg-background">
-      {/* Enhanced animated background blobs - hidden on mobile for performance */}
-      <div className="absolute top-20 right-10 w-48 h-48 sm:w-72 sm:h-72 bg-gradient-to-r from-primary/20 via-primary/10 to-accent/5 rounded-full blur-3xl blob hidden sm:block" />
-      <div
-        className="absolute bottom-0 left-1/4 w-64 h-64 sm:w-96 sm:h-96 bg-gradient-to-r from-accent/20 via-accent/10 to-primary/5 rounded-full blur-3xl blob hidden sm:block"
-        style={{ animationDelay: "2s" }}
-      />
-      <div
-        className="absolute top-1/2 left-10 w-32 h-32 sm:w-64 sm:h-64 bg-gradient-to-r from-primary/10 via-accent/5 to-primary/10 rounded-full blur-3xl blob hidden sm:block"
-        style={{ animationDelay: "4s" }}
-      />
+    <section className="relative py-16 sm:py-24 md:py-32 overflow-hidden">
+      {/* Background gradient effect */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-background pointer-events-none" />
+      
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="space-y-8">
+            <div className="space-y-4">
+              <div className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold">
+                🎉 Save Up to 95%
+              </div>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-foreground leading-tight">
+                Grammarly Premium.{' '}
+                <span className="text-primary">Just $1.99/mo</span>
+              </h1>
+              <p className="text-lg sm:text-xl text-muted-foreground max-w-lg leading-relaxed">
+                Get full access to Grammarly Premium at an unbeatable price. Perfect grammar, advanced writing insights, and AI-powered features for a fraction of the cost.
+              </p>
+            </div>
 
-      {/* Grid pattern overlay */}
-      <div className="absolute inset-0 bg-grid-pattern opacity-[0.02]" />
+            <div className="space-y-3">
+              <div className="flex items-center gap-3">
+                <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
+                <span className="text-sm sm:text-base text-foreground">95% cheaper than official Grammarly</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
+                <span className="text-sm sm:text-base text-foreground">Instant access to all premium features</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
+                <span className="text-sm sm:text-base text-foreground">14-day free trial, no credit card needed</span>
+              </div>
+            </div>
 
-      {/* Floating elements - hidden on mobile for performance */}
-      <motion.div
-        animate={{
-          y: [0, -20, 0],
-          rotate: [0, 5, 0],
-        }}
-        transition={{
-          duration: 6,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-        className="absolute top-32 left-20 text-primary/20 hidden sm:block"
-      >
-        <Sparkles size={32} />
-      </motion.div>
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <Button size="lg" className="text-base font-semibold" asChild>
+                <a href="#pricing">
+                  Start Your Free Trial <ArrowRight className="w-5 h-5 ml-2" />
+                </a>
+              </Button>
+              <Button size="lg" variant="outline" className="text-base font-semibold" asChild>
+                <a href="#how-it-works">How it Works</a>
+              </Button>
+            </div>
 
-      <motion.div
-        animate={{
-          y: [0, 15, 0],
-          rotate: [0, -5, 0],
-        }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-          ease: "easeInOut",
-          delay: 1,
-        }}
-        className="absolute top-48 right-32 text-accent/20 hidden sm:block"
-      >
-        <Shield size={28} />
-      </motion.div>
+            <p className="text-sm text-muted-foreground">
+              ✓ No credit card required • ✓ Cancel anytime • ✓ 14-day free trial
+            </p>
+          </div>
 
-      <motion.div
-        animate={{
-          y: [0, -10, 0],
-          x: [0, 10, 0],
-        }}
-        transition={{
-          duration: 7,
-          repeat: Infinity,
-          ease: "easeInOut",
-          delay: 2,
-        }}
-        className="absolute bottom-32 right-20 text-primary/20 hidden sm:block"
-      >
-        <Zap size={24} />
-      </motion.div>
+          <div className="relative">
+            <div className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl p-8 border border-primary/20">
+              <div className="space-y-6">
+                <div className="text-center space-y-2">
+                  <p className="text-sm font-semibold text-primary uppercase tracking-wide">LIMITED TIME</p>
+                  <p className="text-4xl font-bold text-foreground">14 Days Free</p>
+                  <p className="text-muted-foreground">Then just $1.99/month</p>
+                </div>
+                
+                <div className="space-y-3 pt-6 border-t border-primary/20">
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="font-semibold text-foreground text-sm">Full Premium Access</p>
+                      <p className="text-xs text-muted-foreground">All features included</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="font-semibold text-foreground text-sm">Advanced AI Features</p>
+                      <p className="text-xs text-muted-foreground">Latest technology</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="font-semibold text-foreground text-sm">No Hidden Fees</p>
+                      <p className="text-xs text-muted-foreground">Transparent pricing</p>
+                    </div>
+                  </div>
+                </div>
 
-      <div className="max-w-7xl mx-auto relative z-10">
-        {/* Enhanced Badge */}
-        <motion.div
-          initial={{ opacity: 0, y: -20, scale: 0.9 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 0.6, type: "spring", bounce: 0.4 }}
-          className="flex justify-center mb-8"
-        >
-          <Badge
-            variant="secondary"
-            className="bg-gradient-to-r from-white via-primary/10 to-primary/20 text-primary border-primary/30 shadow-lg backdrop-blur-sm"
-          >
-            <motion.span
-              className="w-2 h-2 bg-primary rounded-full mr-2 relative"
-              animate={{
-                scale: [1, 1.2, 1],
-                opacity: [0.7, 1, 0.7],
-              }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            />
-            <span
-              className="bg-clip-text text-transparent font-medium"
-              style={{
-                background:
-                  "linear-gradient(to right, #1BC19A, #1BC19A, #1BC19A)",
-                WebkitBackgroundClip: "text",
-                backgroundClip: "text",
-              }}
-            >
-              New • Grammarly Premium added
-            </span>
-          </Badge>
-        </motion.div>
-
-        {/* Enhanced Headline */}
-        <div className="text-center mb-8 sm:mb-12">
-          <motion.h1
-            initial={{ opacity: 0, y: 30, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{
-              duration: 0.8,
-              delay: 0.1,
-              type: "spring",
-              bounce: 0.2,
-            }}
-            className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-sans text-balance leading-tight mb-4 sm:mb-6"
-          >
-            <span className="bg-gradient-to-r from-foreground via-foreground to-foreground/80 bg-clip-text text-transparent">
-              Enhance Every Word.
-            </span>
-            <br />
-            <motion.span
-              className="bg-gradient-to-r from-primary via-primary/90 to-accent bg-clip-text text-transparent"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-            >
-              Write Clearly. Confidently. Forever.
-            </motion.span>
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20, scale: 0.98 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ duration: 0.7, delay: 0.3, type: "spring" }}
-            className="text-base sm:text-lg md:text-xl text-foreground/70 text-balance max-w-2xl mx-auto mb-6 sm:mb-8 leading-relaxed px-2"
-          >
-            <span className="bg-gradient-to-r from-foreground/80 via-foreground/70 to-foreground/60 bg-clip-text text-transparent">
-              Unlock premium-level writing enhancements and an AI-powered plagiarism checker — all in one simple monthly subscription. <br />Get clear, confident writing every time you type.
-            </span>
-          </motion.p>
+                <Button className="w-full text-base font-semibold py-6" asChild>
+                  <a href="#pricing">Claim Your Free Trial</a>
+                </Button>
+              </div>
+            </div>
+          </div>
         </div>
-
-        {/* Enhanced CTAs */}
-        <motion.div
-          initial={{ opacity: 0, y: 30, scale: 0.95 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{
-            duration: 0.7,
-            delay: 0.4,
-            type: "spring",
-            bounce: 0.3,
-          }}
-          className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center mb-12 sm:mb-16 px-4"
-        >
-          <motion.div
-            whileHover={{ scale: 1.05, y: -2 }}
-            whileTap={{ scale: 0.98 }}
-            transition={{ type: "spring", stiffness: 400, damping: 17 }}
-          >
-            <Button
-              size="lg"
-              className="gap-2 bg-gradient-to-r from-primary via-primary to-primary/90 hover:from-primary/90 hover:via-primary hover:to-primary shadow-xl shadow-primary/25 border-0 text-white font-semibold px-6 sm:px-8 py-4 sm:py-6 h-auto w-full sm:w-auto"
-              onClick={scrollToPricing}
-            >
-              Start Now
-              <motion.div
-                animate={{ x: [0, 4, 0] }}
-                transition={{
-                  duration: 1.5,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-              >
-                <ArrowRight size={18} />
-              </motion.div>
-            </Button>
-          </motion.div>
-
-          <motion.div
-            whileHover={{ scale: 1.05, y: -2 }}
-            whileTap={{ scale: 0.98 }}
-            transition={{ type: "spring", stiffness: 400, damping: 17 }}
-          >
-            <Button
-              size="lg"
-              variant="outline"
-              onClick={() => router.push("/login")}
-              className="border-2 border-primary/20 hover:border-primary/40 hover:bg-primary/5 backdrop-blur-sm font-semibold px-6 sm:px-8 py-4 sm:py-6 h-auto shadow-lg w-full sm:w-auto"
-            >
-              Try Now
-            </Button>
-          </motion.div>
-        </motion.div>
       </div>
     </section>
-  );
+  )
 }
