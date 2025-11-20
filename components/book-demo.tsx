@@ -67,8 +67,8 @@ Thank you!`
           viewport={{ once: true }}
           className="text-center mb-10 sm:mb-12"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-sans text-foreground mb-4">Ready to get started?</h2>
-          <p className="text-base sm:text-lg text-foreground/70 px-4">Book a Call with our team to see Grammarlina in action.</p>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-sans text-foreground mb-4">Ready to lock in $2.99/month?</h2>
+          <p className="text-base sm:text-lg text-foreground/70 px-4">Book a call to see how we provision Grammarly Premium seats at the ultra-low rate for you or your team.</p>
         </motion.div>
 
         <motion.div

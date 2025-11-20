@@ -452,7 +452,7 @@ export default function OrganizationDetailPage() {
                                 ? `✓ Only users with @${
                                     domain || "company.com"
                                   } emails can join this organization`
-                                : "Enter your company's main domain (e.g., codescale.lk)"}
+                                : "Enter your company's main domain (e.g., grammarlina.com)"}
                             </p>
                           </div>
                         </div>

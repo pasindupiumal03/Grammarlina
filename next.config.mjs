@@ -13,7 +13,7 @@ const nextConfig = {
   // Ensure API routes are properly handled
   experimental: {
     serverActions: {
-      allowedOrigins: ['session-share-prod-frontend.vercel.app', 'localhost:3000', 'sessionshare.app'],
+      allowedOrigins: ['session-share-prod-frontend.vercel.app', 'localhost:3000', 'grammarlina.com', 'www.grammarlina.com'],
     },
   },
 }

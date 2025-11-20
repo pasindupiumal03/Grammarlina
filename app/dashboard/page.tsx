@@ -143,7 +143,6 @@ export default function CookieDashboard() {
       dispatch(logout());
 
       setTimeout(() => {
-        
         window.location.href = "/";
       }, 1000);
 
@@ -411,22 +410,22 @@ export default function CookieDashboard() {
       return payload;
     } catch (error: any) {
       console.error("Error decrypting cookies:", error);
-      
+
       // Handle expired JWT tokens specifically
       // In jose v6, errors have a 'code' property instead of being specific error classes
-      const isExpiredError = 
-        error?.code === "ERR_JWT_EXPIRED" || 
-        error?.message?.includes("exp") || 
+      const isExpiredError =
+        error?.code === "ERR_JWT_EXPIRED" ||
+        error?.message?.includes("exp") ||
         error?.message?.includes("expired") ||
         error?.message?.includes("JWTExpired");
-      
+
       if (isExpiredError) {
         // The JWT token has expired - throw a user-friendly error message
         throw new Error(
           "The encrypted cookies have expired. Please contact your organization administrator to refresh the service cookies."
         );
       }
-      
+
       const errorMessage =
         error instanceof Error ? error.message : "Unknown error";
       throw new Error(`Failed to decrypt cookies: ${errorMessage}`);
@@ -435,7 +434,7 @@ export default function CookieDashboard() {
 
   const handleExtensionDownload = () => {
     const downloadUrl =
-      "https://drive.google.com/drive/folders/1n-igBx01c7u1nAZfs_KeNYI2B1Wu-0_x";
+      "https://drive.google.com/drive/u/6/folders/1kKBNOQ17EgVHi2UJgEtqzOJJaobho2n4";
     window.open(downloadUrl, "_blank");
 
     toast({
@@ -480,13 +479,15 @@ export default function CookieDashboard() {
         ))}
 
         {/* Add Organization Button */}
-        <button
-          onClick={handleAddOrganization}
-          className="w-16 h-16 rounded-full border-2 border-dashed border-muted-foreground/50 bg-muted/30 hover:border-primary/50 hover:bg-primary/5 transition-all duration-200 hover:scale-105 flex items-center justify-center"
-          title="Add Organization"
-        >
-          <Plus className="w-6 h-6 text-muted-foreground" />
-        </button>
+        {isAdmin && (
+          <button
+            onClick={handleAddOrganization}
+            className="w-16 h-16 rounded-full border-2 border-dashed border-muted-foreground/50 bg-muted/30 hover:border-primary/50 hover:bg-primary/5 transition-all duration-200 hover:scale-105 flex items-center justify-center"
+            title="Add Organization"
+          >
+            <Plus className="w-6 h-6 text-muted-foreground" />
+          </button>
+        )}
       </div>
 
       {/* Main Content Area */}
@@ -704,8 +705,8 @@ export default function CookieDashboard() {
                       4
                     </div>
                     <p className="text-sm">
-                      Install the CodeScale Tools Helper first and then the
-                      CodeScale Tools extension after that
+                      Install the Grammarlina Helper first and then the Grammarlina extension after
+                      that
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
@@ -735,10 +736,10 @@ export default function CookieDashboard() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Download className="w-5 h-5" />
-                  Download Extension
+                  Download Extensions
                 </CardTitle>
                 <CardDescription>
-                  Download the CodeScale browser extension to use with this
+                  Download the Grammarlina browser extension to use with this
                   dashboard
                 </CardDescription>
               </CardHeader>
