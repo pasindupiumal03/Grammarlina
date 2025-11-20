@@ -386,7 +386,7 @@ export default function RegisterPage() {
               transition={{ type: "spring", stiffness: 300 }}
               className="w-full max-w-md"
             >
-              <Card className="border-border/50 shadow-xl backdrop-blur-sm bg-card/95 card-hover">
+              <Card className="border-border/50 shadow-xl glass-effect card-hover">
                 <CardHeader className="space-y-1 pb-4">
                   <CardTitle className="text-2xl font-semibold text-center bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
                     Create Account
@@ -656,14 +656,7 @@ export default function RegisterPage() {
                       <button
                         type="submit"
                         disabled={isLoading || rtkLoading || !validForm}
-                        className="w-full h-11 rounded-md font-medium shadow-lg border-0 transition-all duration-200 hover:opacity-90 disabled:opacity-50 text-white"
-                        style={{
-                          background:
-                            "linear-gradient(135deg, #dc2626 0%, #ea580c 100%) !important",
-                          color: "white !important",
-                          backgroundImage:
-                            "linear-gradient(135deg, #dc2626 0%, #ea580c 100%)",
-                        }}
+                        className="w-full h-11 rounded-md font-medium shadow-lg border-0 transition-all duration-200 hover:opacity-90 disabled:opacity-50 text-white accent-gradient"
                       >
                         {isLoading ? (
                           <motion.div

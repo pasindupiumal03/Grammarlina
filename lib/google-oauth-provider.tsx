@@ -8,8 +8,12 @@ export function GoogleAuthProvider({ children }: { children: React.ReactNode }) 
   if (!clientId) {
     console.error('NEXT_PUBLIC_GOOGLE_CLIENT_ID is not configured. Google login will not work.');
     console.error('Please add NEXT_PUBLIC_GOOGLE_CLIENT_ID to your .env.local file');
-    // Still render children so the app doesn't break
-    return <>{children}</>;
+    // Provide a dummy client ID to prevent hook errors
+    return (
+      <GoogleOAuthProvider clientId="dummy-client-id">
+        {children}
+      </GoogleOAuthProvider>
+    );
   }
 
   return (

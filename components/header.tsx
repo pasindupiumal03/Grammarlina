@@ -32,7 +32,7 @@ export function Header() {
 
         <div className="hidden md:flex items-center gap-3">
           <Button variant="outline" asChild>
-            <a href="#pricing">Sign In</a>
+            <a href="/login">Sign In</a>
           </Button>
           <Button asChild>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSeVYKiRIa7wM1OUs48PQiot0et2dYJtGIVE92lD4oVKUb5nKw/viewform?usp=dialog">Start Free Trial</a>
@@ -56,7 +56,7 @@ export function Header() {
             <a href="#faq" className="block text-sm text-muted-foreground hover:text-foreground transition">FAQ</a>
             <div className="flex gap-2 pt-3">
               <Button variant="outline" className="flex-1" asChild>
-                <a href="#pricing">Sign In</a>
+                <a href="/login">Sign In</a>
               </Button>
               <Button className="flex-1" asChild>
                 <a href="#pricing">Free Trial</a>
