@@ -1,6 +1,9 @@
 "use client"
 
 import { useEffect } from "react"
+import { useRouter } from "next/navigation"
+import { useAppSelector } from "@/lib/store"
+import { authSelector } from "@/lib/slices/auth-slice"
 import { Navbar } from "@/components/navbar"
 import { Hero } from "@/components/hero"
 import { Features } from "@/components/features"
@@ -10,6 +13,16 @@ import { BookDemo } from "@/components/book-demo"
 import { Footer } from "@/components/footer"
 
 export default function Home() {
+  const router = useRouter()
+  const authState = useAppSelector(authSelector)
+
+  useEffect(() => {
+    if (authState._id) {
+      router.push("/dashboard")
+      return
+    }
+  }, [router, authState._id])
+
   useEffect(() => {
     // Handle hash navigation when the page loads
     const handleHashNavigation = () => {
